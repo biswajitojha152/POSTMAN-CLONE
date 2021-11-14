@@ -1,0 +1,23 @@
+{
+  "name": "postman-clone",
+  "version": "1.0.0",
+  "description": "postman clone for api testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "author": "Kumar Biswajit Ojha",
+  "license": "ISC",
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.19.0",
+    "@codemirror/commands": "^0.19.5",
+    "@codemirror/lang-json": "^0.19.1",
+    "@codemirror/view": "^0.19.16",
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "pretty-bytes": "^5.6.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
