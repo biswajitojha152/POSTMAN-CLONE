@@ -45,18 +45,18 @@
 
             <!-- tab contents main -->
 
-        <div class="tab-content p-3 border-top-0 border">
+            <div class="tab-content p-3 border-top-0 border">
                 <div class="tab-pane fade show active" id="query-params" role="tabpanel"
                     aria-labelledby="query-params-tab">
                     <div data-query-params></div>
                     <button data-add-query-param-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
                 </div>
-                <div class="tab-pane fade show" id="request-headers" role="tabpanel"
+                <div class="tab-pane fade" id="request-headers" role="tabpanel"
                     aria-labelledby="request-headers-tab">
                     <div data-request-headers></div>
                     <button data-add-request-header-btn class="mt-2 btn btn-outline-success" type="button">Add</button>
                 </div>
-                <div class="tab-pane fade show" id="json" role="tabpanel" aria-labelledby="json-tab">
+                <div class="tab-pane fade" id="json" role="tabpanel" aria-labelledby="json-tab">
                     <div data-json-request-body class="overflow-auto" style="max-height: 200px;">
                     </div>
                 </div>
@@ -79,9 +79,8 @@
 
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="body-tab" data-bs-toggle="tab"
-                        data-bs-target="#body" type="button" role="tab" aria-controls="body"
-                        aria-selected="true">Body</button>
+                    <button class="nav-link active" id="body-tab" data-bs-toggle="tab" data-bs-target="#body"
+                        type="button" role="tab" aria-controls="body" aria-selected="true">Body</button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" id="response-headers-tab" data-bs-toggle="tab"
@@ -93,13 +92,14 @@
             <!-- tab contents copied -->
 
             <div class="tab-content p-3 border-top-0 border">
-                <div class="tab-pane fade show active" id="body" role="tabpanel"
-                    aria-labelledby="body-tab">
+                <div class="tab-pane fade show active" id="body" role="tabpanel" aria-labelledby="body-tab">
                     <div data-json-response-body class="overflow-auto" style="max-height: 200px;">
                     </div>
                 </div>
-                <div class="tab-pane fade show" id="response-headers" role="tabpanel" aria-labelledby="response-headers-tab">
-                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 2rem;" data-response-headers></div>
+                <div class="tab-pane fade" id="response-headers" role="tabpanel"
+                    aria-labelledby="response-headers-tab">
+                    <div style="display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 2rem;"
+                        data-response-headers></div>
                 </div>
                 </form>
             </div>

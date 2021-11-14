@@ -41,12 +41,21 @@ axios.interceptors.response.use(updateEndTime, e =>{
 const {requestEditor, updateResponseEditor} = setupEditors();
 form.addEventListener('submit', e=>{
     e.preventDefault();
-
+    
+    let data;
+    try{
+        data = JSON.parse(requestEditor.state.doc.toString() || null);
+    } 
+    catch(e){
+        alert("JSON data is malformed");
+        return;
+    }
     axios({
         url: document.querySelector('[data-url]').value,
         method: document.querySelector('[data-method]').value,
         params: keyValuePairsToObjects(queryParamsContainer),
-        headers: keyValuePairsToObjects(requestHeadersContainer)
+        headers: keyValuePairsToObjects(requestHeadersContainer),
+        data
     })
     .catch(e => e)
     .then(response=>{
@@ -86,7 +95,7 @@ function createKeyValuePair(){
 
 function keyValuePairsToObjects(container){
     const pairs = container.querySelectorAll('[data-key-value-pair]');
-    [...pairs].reduce((data, pair)=>{
+    return [...pairs].reduce((data, pair)=>{
         const key = pair.querySelector('[data-key]').value;
         const value = pair.querySelector('[data-value]').value;
 
